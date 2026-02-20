@@ -151,3 +151,32 @@ plt.show()
 - The lead set is usually dominated by narrow, high-amplitude peaks that resemble specular returns from smoother open water.
 - These example plots are useful because unsupervised labels (0/1) do not automatically correspond to “ice/lead” as interpreting the clusters requires checking the waveform morphology. Together, these figures provide qualitative evidence that the two clusters correspond to two distinct echo populations rather than a random split in feature space.
 
+### Waveform Alignment (Original vs Aligned)
+
+The alignment figures are shown below:
+
+![Individual waveform comparison](alignent_examples.png)
+
+- The alignment figure compares original waveforms (blue) with aligned waveforms (red dashed) for a few examples from each class.
+- In real altimetry data, the main peak can appear at slightly different range bins due to tracking, noise, or surface variability. If we average many unaligned echoes, the mean peak can become “smeared,” artificially inflating the standard deviation and making class differences harder to interpret.
+- Alignment shifts each waveform so its key peak (or reference location) lines up with a common bin. This makes the averaged echo shapes cleaner and ensures the mean/std summary reflects shape differences rather than simple horizontal offsets.
+
+## Quantitative Evaluation: Confusion Matrix (ESA vs GMM)
+- Finally, I compare the unsupervised GMM classification against the ESA official surface-type labels using a confusion matrix shown below:
+
+![Confusion matrix](confusion_matrix.png)
+
+-   The matrix counts how many echoes are assigned to each combination of (ESA truth, GMM prediction). High values along the diagonal indicate strong agreement, while off-diagonal counts represent misclassifications (e.g., ESA lead predicted as ice, or vice versa).
+-   This evaluation is important because clustering alone does not guarantee the groups correspond to the desired physical classes. A good confusion matrix demonstrates that the feature set and the GMM separation capture real surface differences.
+-   In this run, the matrix shows strong diagonal dominance, suggesting that the GMM clusters align well with the ESA-provided classification.
+
+Below are the name of the Sentinel 2 and Sentinel-3 data folders that are used in this project.
+
+- Sentinel-2 optical data : S2A_MSIL1C_20190301T235611_N0207_R116_T01WCU_20190302T014622.SAFE
+- Sentinel-3 OLCI data : S3A_SR_2_LAN_SI_20190307T005808_20190307T012503_20230527T225016_1614_042_131______LN3_R_NT_005.SEN3
+
+<!-- CONTACT -->
+# Contact
+Yihang Zhong - zcqshop@ucl.ac.uk
+
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
