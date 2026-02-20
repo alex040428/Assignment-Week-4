@@ -134,7 +134,7 @@ plt.title('Clusters_gmm==1(lead)')
 plt.show()
 ```
 
-![Lead cluster](lead_cluster.png)
+![Lead cluster](lead.png)
 
 Sea ice cluster echoes:
 ```sh
@@ -145,7 +145,7 @@ plt.title('Clusters_gmm==0(sea ice)')
 plt.show()
 ```
 
-![Sea ice cluster](sea_ice_cluster.png)
+![Sea ice cluster](sea_ice.png)
 
 - The sea-ice set typically contains echoes with a more distributed shape and a broader trailing edge, consistent with scattering from a rough or heterogeneous surface.
 - The lead set is usually dominated by narrow, high-amplitude peaks that resemble specular returns from smoother open water.
