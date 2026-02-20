@@ -1,5 +1,6 @@
 # GEOL0069_Week4
 
+<!-- GETTING STARTED -->
 ## Getting Started
 
 The Week 4 assignment for GEOL0069 Artificial Intelligence for Earth Observation focuses on applying unsupervised learning to a real Earth-observation problem: classifying Sentinel-3 SAR altimetry echoes over polar regions. Each radar measurement contains a returned “echo”  whose shape depends on surface type. In sea-ice zones, echoes can come from sea ice or from leads.  
@@ -8,6 +9,7 @@ In this project, we extract a small set of waveform-derived features, then use c
 
 <p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
 
+<!-- PREREQUISITES -->
 ## Prerequisites
 
 Run the notebook in Google Colab.
@@ -16,13 +18,13 @@ Run the notebook in Google Colab.
   !pip install netCDF4
   ```
   ```sh
-  !pip install basemap
-  ```
-  ```sh
-  !pip install cartopy
+  !pip install rasterio
   ```
 * Mounting Google Drive on Google Colab
   ```sh
   from google.colab import drive
   drive.mount('/content/drive')
   ```
+
+<!-- INTRODUCTION -->
+## Introduction to unsupervised learning
