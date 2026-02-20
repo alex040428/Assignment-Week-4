@@ -167,6 +167,8 @@ The alignment figures are shown below:
 - In real altimetry data, the main peak can appear at slightly different range bins due to tracking, noise, or surface variability. If we average many unaligned echoes, the mean peak can become “smeared,” artificially inflating the standard deviation and making class differences harder to interpret.
 - Alignment shifts each waveform so its key peak (or reference location) lines up with a common bin. This makes the averaged echo shapes cleaner and ensures the mean/std summary reflects shape differences rather than simple horizontal offsets.
 
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+
 ## Quantitative Evaluation: Confusion Matrix (ESA vs GMM)
 - Finally, I compare the unsupervised GMM classification against the ESA official surface-type labels using a confusion matrix shown below:
 
