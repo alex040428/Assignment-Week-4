@@ -115,10 +115,12 @@ plt.fill_between(range(len(mean_lead)), mean_lead - std_lead, mean_lead + std_le
 plt.title('Plot of mean and standard deviation for each class')
 plt.legend()
 ```
-- The plot below summarises the two clustered classes by showing the mean waveform for each class, together with a ±1σ standard deviation envelope. The mean provides a “typical” echo shape for the class, while the standard deviation highlights how variable echoes are within that class. In general, lead echoes tend to be more peaked and specular, while sea-ice echoes often show a broader return due to rougher scattering.
+
+![Mean and std for each class](mean&stdshape.png)
+
+- The plot above summarises the two clustered classes by showing the mean waveform for each class, together with a ±1σ standard deviation envelope. The mean provides a “typical” echo shape for the class, while the standard deviation highlights how variable echoes are within that class. In general, lead echoes tend to be more peaked and specular, while sea-ice echoes often show a broader return due to rougher scattering.
 - The shaded regions are important: large standard deviation indicates high intra-class variability (e.g., differing lead widths, mixed surfaces, or small shifts in peak position). This figure is the core output of the assignment because it turns thousands of individual echoes into two interpretable summary shapes.
 
-![Mean and std for each class](mean&std shape.png)
 
 
 
