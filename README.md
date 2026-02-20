@@ -121,6 +121,33 @@ plt.legend()
 - The plot above summarises the two clustered classes by showing the mean waveform for each class, together with a ±1σ standard deviation envelope. The mean provides a “typical” echo shape for the class, while the standard deviation highlights how variable echoes are within that class. In general, lead echoes tend to be more peaked and specular, while sea-ice echoes often show a broader return due to rougher scattering.
 - The shaded regions are important: large standard deviation indicates high intra-class variability (e.g., differing lead widths, mixed surfaces, or small shifts in peak position). This figure is the core output of the assignment because it turns thousands of individual echoes into two interpretable summary shapes.
 
+### Example Echoes for Sea Ice and Leads
 
+To visually check that the clustering makes physical sense, I plotted sets of individual waveforms for each class using the code below:
 
+Lead cluster echoes:
+```sh
+# plot echos for the lead cluster
+x = np.stack([np.arange(1,waves_cleaned[clusters_gmm==1].shape[1]+1)]*waves_cleaned[clusters_gmm==1].shape[0])
+plt.plot(x,waves_cleaned[clusters_gmm==1])  # plot of all the echos
+plt.title('Clusters_gmm==1(lead)')
+plt.show()
+```
+
+![Lead cluster](lead_cluster.png)
+
+Sea ice cluster echoes:
+```sh
+# plot echos for the sea ice cluster
+x = np.stack([np.arange(1,waves_cleaned[clusters_gmm==0].shape[1]+1)]*waves_cleaned[clusters_gmm==0].shape[0])
+plt.plot(x,waves_cleaned[clusters_gmm==0])  # plot of all the echos
+plt.title('Clusters_gmm==0(sea ice)')
+plt.show()
+```
+
+![Sea ice cluster](sea_ice_cluster.png)
+
+- The sea-ice set typically contains echoes with a more distributed shape and a broader trailing edge, consistent with scattering from a rough or heterogeneous surface.
+- The lead set is usually dominated by narrow, high-amplitude peaks that resemble specular returns from smoother open water.
+- These example plots are useful because unsupervised labels (0/1) do not automatically correspond to “ice/lead” as interpreting the clusters requires checking the waveform morphology. Together, these figures provide qualitative evidence that the two clusters correspond to two distinct echo populations rather than a random split in feature space.
 
