@@ -170,7 +170,7 @@ The alignment figures are shown below:
 -   This evaluation is important because clustering alone does not guarantee the groups correspond to the desired physical classes. A good confusion matrix demonstrates that the feature set and the GMM separation capture real surface differences.
 -   In this run, the matrix shows strong diagonal dominance, suggesting that the GMM clusters align well with the ESA-provided classification.
 
-Below are the name of the Sentinel 2 and Sentinel-3 data folders that are used in this project.
+Below are the name of the Sentinel-2 and Sentinel-3 data folders that are used in this project.
 
 - Sentinel-2 optical data : S2A_MSIL1C_20190301T235611_N0207_R116_T01WCU_20190302T014622.SAFE
 - Sentinel-3 OLCI data : S3A_SR_2_LAN_SI_20190307T005808_20190307T012503_20230527T225016_1614_042_131______LN3_R_NT_005.SEN3
@@ -178,5 +178,7 @@ Below are the name of the Sentinel 2 and Sentinel-3 data folders that are used i
 <!-- CONTACT -->
 # Contact
 Yihang Zhong - zcqshop@ucl.ac.uk
+
+Project Link: [https://github.com/alex040428/Assignment-Week-4](https://github.com/alex040428/Assignment-Week-4)
 
 <p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
