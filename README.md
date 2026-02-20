@@ -24,7 +24,7 @@ Run the notebook in Google Colab.
   drive.mount('/content/drive')
   ```
 
-<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
 
 <!-- INTRODUCTION -->
 ## Introduction to unsupervised learning: K-means Clustering
@@ -40,7 +40,7 @@ K-means is one of the most widely used unsupervised clustering algorithms and pr
 - It assumes clusters are roughly spherical in feature space and similar in size, and it assigns each point to exactly one cluster.
 - The choice of K is also user-defined, so you must decide how many groups exist in advance. In this assignment, while K-means is useful conceptually, a probabilistic approach (GMM) can be more flexible for separating sea-ice and lead populations whose spreads may differ.
 
-<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
 
 ## Unsupervised Learning: Gaussian Mixture Models (GMM)
 
@@ -81,7 +81,7 @@ plt.title('Gaussian Mixture Model')
 
 ![Gaussian Mixture Model](GMM.png)
 
-<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
 
 ## Running the GMM Model
 
@@ -167,7 +167,7 @@ The alignment figures are shown below:
 - In real altimetry data, the main peak can appear at slightly different range bins due to tracking, noise, or surface variability. If we average many unaligned echoes, the mean peak can become “smeared,” artificially inflating the standard deviation and making class differences harder to interpret.
 - Alignment shifts each waveform so its key peak (or reference location) lines up with a common bin. This makes the averaged echo shapes cleaner and ensures the mean/std summary reflects shape differences rather than simple horizontal offsets.
 
-<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
 
 ## Quantitative Evaluation: Confusion Matrix (ESA vs GMM)
 - Finally, I compare the unsupervised GMM classification against the ESA official surface-type labels using a confusion matrix shown below:
@@ -189,4 +189,4 @@ Yihang Zhong - zcqshop@ucl.ac.uk
 
 Project Link: [https://github.com/alex040428/Assignment-Week-4](https://github.com/alex040428/Assignment-Week-4)
 
-<p align="right">(<a href="#geol0069_week4">back to top</a>)</p> ```
+<p align="right">(<a href="#geol0069_week4">back to top</a>)</p>
