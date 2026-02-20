@@ -155,7 +155,7 @@ plt.show()
 
 The alignment figures are shown below:
 
-![Individual waveform comparison](alignent_examples.png)
+![Individual waveform comparison](alignment_examples.png)
 
 - The alignment figure compares original waveforms (blue) with aligned waveforms (red dashed) for a few examples from each class.
 - In real altimetry data, the main peak can appear at slightly different range bins due to tracking, noise, or surface variability. If we average many unaligned echoes, the mean peak can become “smeared,” artificially inflating the standard deviation and making class differences harder to interpret.
