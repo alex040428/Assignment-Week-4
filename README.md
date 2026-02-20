@@ -134,8 +134,6 @@ plt.title('Clusters_gmm==1(lead)')
 plt.show()
 ```
 
-![Lead cluster](lead.png)
-
 Sea ice cluster echoes:
 ```sh
 # plot echos for the sea ice cluster
@@ -144,6 +142,8 @@ plt.plot(x,waves_cleaned[clusters_gmm==0])  # plot of all the echos
 plt.title('Clusters_gmm==0(sea ice)')
 plt.show()
 ```
+
+![Lead cluster](lead.png)
 
 ![Sea ice cluster](sea_ice.png)
 
