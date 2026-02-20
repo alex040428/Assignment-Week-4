@@ -76,3 +76,49 @@ plt.title('Gaussian Mixture Model')
 ```
 
 ![Gaussian Mixture Model](GMM.png)
+
+## Running the GMM Model
+
+### Feature preparation and cleaning
+- In the notebook, each echo is represented by a compact feature vector (e.g., sig0, peakiness, and SSD).
+- These variables are stacked into a feature matrix and then standardised so that features with different numeric ranges contribute fairly to the clustering.
+- Any rows containing NaN values are removed, and the dataset is restricted to echoes with ESA surface classes relevant to this task.
+
+### Fitting and predicting clusters
+A 2-component Gaussian Mixture Model is then fitted to the cleaned feature matrix. The trained model predicts a cluster label (0/1) for each echo, which is later interpreted as sea ice or lead by inspecting waveform shapes and comparing against ESA labels.
+
+## Results: overview
+- This section summarises the main outcomes of the unsupervised classification.
+- First, we compare the average echo shape and standard deviation between the two classes.
+- Next, we visualise example echoes from each class to support the interpretation of “sea ice” versus “lead”.
+- We also include waveform alignment examples to show why alignment can produce cleaner class averages.
+- Finally, we evaluate agreement with ESA official labels using a confusion matrix.
+
+### Mean and Standard Deviation Echo Shape (Sea Ice vs Lead)
+
+The means and standard deviation of the sea ice and lead echos are calculated and plotted using the code below. 
+
+```sh
+mean_ice = np.mean(waves_cleaned[clusters_gmm==0],axis=0)
+std_ice = np.std(waves_cleaned[clusters_gmm==0], axis=0)
+
+plt.plot(mean_ice, label='ice')
+plt.fill_between(range(len(mean_ice)), mean_ice - std_ice, mean_ice + std_ice, alpha=0.3)
+
+
+mean_lead = np.mean(waves_cleaned[clusters_gmm==1],axis=0)
+std_lead = np.std(waves_cleaned[clusters_gmm==1], axis=0)
+
+plt.plot(mean_lead, label='lead')
+plt.fill_between(range(len(mean_lead)), mean_lead - std_lead, mean_lead + std_lead, alpha=0.3)
+
+plt.title('Plot of mean and standard deviation for each class')
+plt.legend()
+```
+- The plot below summarises the two clustered classes by showing the mean waveform for each class, together with a ±1σ standard deviation envelope. The mean provides a “typical” echo shape for the class, while the standard deviation highlights how variable echoes are within that class. In general, lead echoes tend to be more peaked and specular, while sea-ice echoes often show a broader return due to rougher scattering.
+- The shaded regions are important: large standard deviation indicates high intra-class variability (e.g., differing lead widths, mixed surfaces, or small shifts in peak position). This figure is the core output of the assignment because it turns thousands of individual echoes into two interpretable summary shapes.
+
+![Mean and std for each class](mean&std shape.png)
+
+
+
