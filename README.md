@@ -185,7 +185,7 @@ Below are the name of the Sentinel-2 and Sentinel-3 data folders that are used i
 
 <!-- CONTACT -->
 # Contact
-Yihang Zhong - zcqshop@ucl.ac.uk
+Yihang Zhong: zcqshop@ucl.ac.uk
 
 Project Link: [https://github.com/alex040428/Assignment-Week-4](https://github.com/alex040428/Assignment-Week-4)
 
